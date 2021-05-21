@@ -21,11 +21,15 @@ kubectl get pods -n yaobank -l app=customer -o wide
 ```
 ```
 ubuntu@host1:~/calico/lab-manifests$ kubectl get pods -n yaobank -l app=customer -o wide
-NAME                        READY   STATUS    RESTARTS   AGE   IP           NODE      NOMINATED NODE   READINESS GATES
+NAME                        READY   STATUS    RESTARTS   AGE   IP           NODE                                         NOMINATED NODE   READINESS GATES
 customer-5df6b999fb-cf7jl   1/1     Running   0          24h   10.48.0.67   ip-10-0-1-31.ca-central-1.compute.internal   <none>           <none>
 ```
-
-Note the node on which the pod is running on (`worker1` in this example.)
+```
+ip-10-0-1-20.ca-central-1.compute.internal   control1
+ip-10-0-1-30.ca-central-1.compute.internal   worker1
+ip-10-0-1-31.ca-central-1.compute.internal   worker2
+```
+Note the node on which the pod is running on (`worker2` in this example.)
 
 #### 2.1.1.2. Exec into the customer pod
 Use kubectl to exec into the pod so we can check the pod networking details. 
@@ -93,9 +97,9 @@ exit
 ### 2.1.2. Examine the host's network namespace
 
 #### 2.1.2.1. SSH into the customer pod's host node
-We'll start by switching to the node where the customer pod is running. In our example earlier this was worker 1. (If you've forgotten which node it was for you then repeat step 2.1.1.1 above to find the node.)
+We'll start by switching to the node where the customer pod is running. In our example earlier this was worker 2. (If you've forgotten which node it was for you then repeat step 2.1.1.1 above to find the node.)
 ```
-worker1
+worker2
 ```
 
 #### 2.1.2.2. Examine interfaces
