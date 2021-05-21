@@ -22,7 +22,7 @@ kubectl get pods -n yaobank -l app=customer -o wide
 ```
 ubuntu@host1:~/calico/lab-manifests$ kubectl get pods -n yaobank -l app=customer -o wide
 NAME                        READY   STATUS    RESTARTS   AGE   IP           NODE      NOMINATED NODE   READINESS GATES
-customer-5df6b999fb-cf7jl   1/1     Running   0          24h   10.48.0.67   worker1   <none>           <none>
+customer-5df6b999fb-cf7jl   1/1     Running   0          24h   10.48.0.67   ip-10-0-1-31.ca-central-1.compute.internal   <none>           <none>
 ```
 
 Note the node on which the pod is running on (`worker1` in this example.)
