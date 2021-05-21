@@ -9,9 +9,9 @@ In this lab, you will:
 
 Make sure you are in the right directory:
 
-`cd TRAININGWORKBOOKS/foundation/1-install-calico-k8s-lab`
+`cd training-lab-workbooks/foundation/1-install-calico-k8s-lab`
 
-Change `TRAININGWORKBOOKS` to the directory where you have clone the training labs repository.
+Change `training-lab-workbooks` to the directory where you have clone the training labs repository.
 
 ## 1.1. Install Calico
 
