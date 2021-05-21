@@ -121,11 +121,11 @@ ubuntu@worker1:~$ ip -c link
     link/ether ee:ee:ee:ee:ee:ee brd ff:ff:ff:ff:ff:ff link-netnsid 1
 8: cali2b0ff6bbf7d@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default 
     link/ether ee:ee:ee:ee:ee:ee brd ff:ff:ff:ff:ff:ff link-netnsid 2
-9: calie965c96dc90@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default 
+10: calie965c96dc90@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default 
     link/ether ee:ee:ee:ee:ee:ee brd ff:ff:ff:ff:ff:ff link-netnsid 3
 ```
 
-Looking at interface number 9 in this example we see `calie965c96dc90` which links to `@if3` in network namespace ID 3 (the customer pod's network namespace).  You may recall that interface 3 in the pod's network namespace was `eth0`, so this looks exactly as expected for the veth pair that connects the customer pod to the host network namespace.  
+Looking at interface number 10 in this example we see `calie965c96dc90` which links to `@if3` in network namespace ID 3 (the customer pod's network namespace).  You may recall that interface 3 in the pod's network namespace was `eth0`, so this looks exactly as expected for the veth pair that connects the customer pod to the host network namespace.  
 
 You can also see the host end of the veth pairs to other pods running on this node, all beginning with `cali`.
 
