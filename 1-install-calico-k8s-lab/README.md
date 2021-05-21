@@ -92,7 +92,7 @@ kubectl rollout status -n yaobank deployment/database
 
 ## 1.3. Access the Sample Application Web GUI
 
-Browse to the "Web Application" (http://masternodeip:30180) URL sent with your lab login details. You should see the bank balance for a user account.
+Browse to the "Web Application" (http://<your-login>.lynx.tigera.ca/:30180) URL sent with your lab login details. You should see the bank balance for a user account.
  
 
 > __Congratulations! You have completed your first lab.__
