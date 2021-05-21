@@ -17,13 +17,12 @@ Change `training-lab-workbooks` to the directory where you have clone the traini
 
 Calico will be the networking (CNI) and network policy implementation throughout your training lab. To install Calico, run the following commands in the terminal window.
 
-Install the Tigera Calico operator.
+Install the Tigera Calico operator and custom resource definitions.
 
 ```
 kubectl create -f https://docs.projectcalico.org/manifests/tigera-operator.yaml
-
 ```
-Install the Tigera custom resource definitions.
+Install Calico by creating the necessary custom resource.
 
 ```
 kubectl apply -f -<<EOF
