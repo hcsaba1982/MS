@@ -99,7 +99,7 @@ exit
 #### 2.1.2.1. SSH into the customer pod's host node
 We'll start by switching to the node where the customer pod is running. In our example earlier this was worker 2. (If you've forgotten which node it was for you then repeat step 2.1.1.1 above to find the node.)
 ```
-worker2
+ssh worker2
 ```
 
 #### 2.1.2.2. Examine interfaces
