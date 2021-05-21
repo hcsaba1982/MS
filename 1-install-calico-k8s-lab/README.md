@@ -17,8 +17,34 @@ Change `training-lab-workbooks` to the directory where you have clone the traini
 
 Calico will be the networking (CNI) and network policy implementation throughout your training lab. To install Calico, run the following commands in the terminal window.
 
+Install the Tigera Calico operator.
+
 ```
-kubectl create -f ./lab_manifests/1-calico.yaml
+kubectl create -f https://docs.projectcalico.org/manifests/tigera-operator.yaml
+
+```
+Install the Tigera custom resource definitions.
+
+```
+kubectl apply -f -<<EOF
+# This section includes base Calico installation configuration.
+# For more information, see: https://docs.projectcalico.org/v3.19/reference/installation/api#operator.tigera.io/v1.Installation
+apiVersion: operator.tigera.io/v1
+kind: Installation
+metadata:
+  name: default
+spec:
+  # Configures Calico networking.
+  calicoNetwork:
+    # Note: The ipPools section cannot be modified post-install.
+    ipPools:
+    - blockSize: 26
+      cidr: 10.48.0.0/16
+      encapsulation: None
+      natOutgoing: Enabled
+      nodeSelector: all()
+EOF
+
 ```
 
 **Confirm that all of the pods are running with the following command.**
