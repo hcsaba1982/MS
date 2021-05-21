@@ -48,7 +48,7 @@ root@customer-5df6b999fb-cf7jl:/app# ip addr
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
        valid_lft forever preferred_lft forever
-3: eth0@if9: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+3: eth0@if10: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
     link/ether 1a:ce:f0:6c:20:00 brd ff:ff:ff:ff:ff:ff link-netnsid 0
     inet 10.48.0.67/32 scope global eth0
        valid_lft forever preferred_lft forever
@@ -67,14 +67,14 @@ ip -c link
 root@customer-5df6b999fb-cf7jl:/app# ip -c link
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-3: eth0@if9: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default 
+3: eth0@if10: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default 
     link/ether 1a:ce:f0:6c:20:00 brd ff:ff:ff:ff:ff:ff link-netnsid 0
 ```
 
 Look at the `eth0` part of the output. The key things to note are:
 * The `eth0` interface is interface number 3 in the pod's network namespace.
 * `eth0` is a link to the host network namespace (indicated by `link-netnsid 0`). i.e. It is the pod's side of the veth pair (virtual ethernet pair) that connects the pod to the host's networking.
-* The `@if9` at the end of the interface name is the interface number of the other end of the veth pair within the host's network namespaces. In this example, interface number 9.  Remember this for later. We will take look at the other end of the veth pair shortly.
+* The `@if10` at the end of the interface name is the interface number of the other end of the veth pair within the host's network namespaces. In this example, interface number 9.  Remember this for later. We will take look at the other end of the veth pair shortly.
 
 Finally, let's look at the routes the pod sees.
 
@@ -103,7 +103,7 @@ ssh worker2
 ```
 
 #### 2.1.2.2. Examine interfaces
-Now we're on the node hosting the customer pod we'll take a look to examine the other end of the veth pair. In our example output earlier, the `@if9` indicated it should be interface number 9 in the host network namespace. (Your interface numbers may be different, but you should be able to follow along the same logic.)
+Now we're on the node hosting the customer pod we'll take a look to examine the other end of the veth pair. In our example output earlier, the `@if10` indicated it should be interface number 10 in the host network namespace. (Your interface numbers may be different, but you should be able to follow along the same logic.)
 ```
 ip -c link
 ```
