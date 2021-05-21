@@ -43,7 +43,6 @@ spec:
       natOutgoing: Enabled
       nodeSelector: all()
 EOF
-
 ```
 
 **Confirm that all of the pods are running with the following command.**
