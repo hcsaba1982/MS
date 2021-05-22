@@ -30,7 +30,7 @@ $ kubectl cluster-info dump | grep -m 2 -E "service-cluster-ip-range|cluster-cid
 
 #### 2.3.1.2. Calico configuration
 
-It is also important to understand the IP Pools that Calico has been configure with, which offer finer grained control over IP address ranges to be used by pods in the cluster.
+It is also important to understand the IP Pools that Calico has been configured with, which offers fine grained control over IP address ranges to be used by pods in the cluster.
 
 ```bash
 $ calicoctl get ippools
