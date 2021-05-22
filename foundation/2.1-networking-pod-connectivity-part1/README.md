@@ -47,7 +47,7 @@ $ ip addr
        valid_lft forever preferred_lft forever
 2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
     link/ipip 0.0.0.0 brd 0.0.0.0
-4: eth0@if10: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 8981 qdisc noqueue state UP group default 
+4: eth0@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 8981 qdisc noqueue state UP group default 
     link/ether 62:fc:7f:a0:5f:de brd ff:ff:ff:ff:ff:ff link-netnsid 0
     inet 10.48.0.133/32 brd 10.48.0.133 scope global eth0
        valid_lft forever preferred_lft forever
@@ -96,7 +96,7 @@ $ ip -c link
 ```
 
 Look at the `eth0` part of the output. The are a couple of things to note:
-* `eth0` is a link to the host network namespace (indicated by `link-netnsid 0` at the end of that line), and it is the fourth interface in our example above (the number in your lab will be difefrent). That is one end of the virtual ethernet pair whcih calico will plumb to the host network namespace.
+* `eth0` is a link to the host network namespace (indicated by `link-netnsid 0` at the end of that line), and it is the fourth interface in our example above (the number in your lab will be different). That is one end of the virtual ethernet pair whcih calico will plumb to the host network namespace.
 * The `@if11` after the interface name is the interface number of the other end of the veth pair within the host network namespace. Remember the number you see for later, as we will take look at the other end of the veth pair shortly.
 
 Finally, let's look at the routes the pod sees.
