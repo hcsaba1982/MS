@@ -94,7 +94,6 @@ $ kubectl apply -f 1-yaobank.yaml
 $ kubectl get pods -n yaobank -o wide
 ```
 ```
- kubectl get pods -n yaobank -o wide
 NAME                        READY   STATUS    RESTARTS   AGE   IP            NODE           NOMINATED NODE   READINESS GATES
 customer-787758576-f2zgn    1/1     Running   0          78s   10.48.0.131   ip-10-0-1-31   <none>           <none>
 database-64bfcc464d-77d4z   1/1     Running   0          78s   10.48.0.2     ip-10-0-1-30   <none>           <none>
