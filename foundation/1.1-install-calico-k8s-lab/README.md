@@ -39,7 +39,7 @@ spec:
       nodeSelector: all()
 ```
 
-As you can see, we have defined a pool with the CIDR 10.48.0.0/24. This must be within the range of the pod CIDR when we installed Kubernetes. Here we are defining a smaller subnet within the available range as we will be creating additional pools for other purposes in future labs. Before applying the customer resources and config, let's download and implement the last version available for the operator:
+As you can see, we have defined a pool with the CIDR 10.48.0.0/24. This must be within the range of the pod CIDR when we installed Kubernetes. Here we are defining a smaller subnet within the available range as we will be creating additional pools for other purposes in future labs. Before applying the customer resources and config, let's download and implement the lastest version available for the operator:
 
 ```
 $ kubectl create -f https://docs.tigera.io/manifests/tigera-operator.yaml
