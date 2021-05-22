@@ -33,7 +33,7 @@ spec:
     # Note: The ipPools section cannot be modified post-install.
     ipPools:
     - blockSize: 26
-      cidr: 10.48.0.0.24
+      cidr: 10.48.0.0/24
       encapsulation: None
       natOutgoing: Enabled
       nodeSelector: all()
