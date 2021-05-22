@@ -47,13 +47,13 @@ $ ip addr
        valid_lft forever preferred_lft forever
 2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
     link/ipip 0.0.0.0 brd 0.0.0.0
-4: eth0@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 8981 qdisc noqueue state UP group default 
+4: eth0@if10: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 8981 qdisc noqueue state UP group default 
     link/ether 62:fc:7f:a0:5f:de brd ff:ff:ff:ff:ff:ff link-netnsid 0
     inet 10.48.0.133/32 brd 10.48.0.133 scope global eth0
        valid_lft forever preferred_lft forever
 ```
 
-* There is an `eth0` interface which has the pods actual IP address, (`10.48.0.133` in the example). Notice this matches the IP address that `kubectl get pods` returned earlier. The above output shows a tunnel interface, as in the case above IPIP is configured in the pool at the time of deployment, however in your lab, such interface will not be there as we did not set this parameter in the manifest 1-custom-resources.yaml which we inspected in the previous lab:
+* There is an `eth0` interface which has the pods actual IP address, (`10.48.0.133` in the example). Notice this matches the IP address that `kubectl get pods` returned earlier. The above output shows a tunnel interface, as in the case above IPIP is configured in the pool at the time of deployment, however in your lab, such interface will not be there as we did not set this parameter in the manifest "1-custom-resources.yaml" which we inspected in the previous lab:
 
 ```
 $calicoctl get ippool -o yaml
@@ -79,7 +79,7 @@ items:
 Note the fields:
 
 * blockSize: used by Calico IPAM to efficiently assign ip addresses in blocks to be advertised by BGP.
-* ipipMode/vxlanMode: to allow or disable ipip and vxlan overlay. options are never, always and crosssubnet.
+* ipipMode/vxlanMode: to allow or disable ipip and vxlan overlay. Valid options are Never, Always and Crosssubnet.
 
 Next let's look more closely at the interfaces using `ip link`. 
 
