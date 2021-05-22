@@ -53,7 +53,7 @@ pool2-ipv4-ippool     10.48.128.0/24   all()
 
 Calico supports annotations on both namespaces and pods that can be used to control which IP Pool (or even which IP address) a pod will receive when it is created. 
 
-There is a new version ofthe yaobank manifest file (`2.2-yaobank-ipam.yaml`), so we added the needed annotation to use the created new pool when deploying. You can modify the existing deployment if you wish, but for convenience, we can just delete the old deployment, and use that new manifest. The change is shown below:
+There is a new version of the yaobank manifest file (`2.2-yaobank-ipam.yaml`), so we added the necessary annotation to use the created new pool when deploying. You can modify the existing deployment if you wish, but for convenience, we can just delete the old deployment, and use that new manifest. The change is shown below:
 
 ```
     metadata:
