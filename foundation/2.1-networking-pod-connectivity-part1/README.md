@@ -30,7 +30,7 @@ Note the node on which the pod is running on (`ip-10-0-1-31` in the example abov
 Use kubectl to exec into the pod so we can check the pod networking details. 
 
 ```
-$ kubectl exec -ti -n yaobank $(kubectl get pods -n yaobank -l app=customer -o name) -- bash
+$ kubectl exec -it -n yaobank $(kubectl get pods -n yaobank -l app=customer -o name) -- bash
 ```
 
 #### 2.1.1.3. Examine the pod's networking
