@@ -105,7 +105,6 @@ Finally, let's look at the routes the pod sees.
 $ ip route
 ```
 ```
-root@customer-787758576-f9mxf:/app# ip route
 default via 169.254.1.1 dev eth0 
 169.254.1.1 dev eth0  scope link 
 ```
