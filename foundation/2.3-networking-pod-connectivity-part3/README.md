@@ -2,10 +2,10 @@
 
 This is the 2nd lab in a series of labs exploring k8s networking. This lab focused on understanding relevant address ranges and BGP advertisement.
 In this lab, you will: \
-2.2.1. Examine IP address ranges used by the cluster. \
-2.2.2. Create additional Calico IP Pools. \
-2.2.3. Configure Calico BGP Peering to connect with a network outside of the cluster. \
-2.2.4. Configure a namespace to use externally routable IP addresses.
+2.3.1. Examine IP address ranges used by the cluster. \
+2.3.2. Create additional Calico IP Pools. \
+2.3.3. Configure Calico BGP Peering to connect with a network outside of the cluster. \
+2.3.4. Configure a namespace to use externally routable IP addresses.
 
 ### 2.3.0. Before you begin
 
