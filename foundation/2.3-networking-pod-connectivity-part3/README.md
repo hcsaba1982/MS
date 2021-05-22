@@ -160,7 +160,7 @@ No IPv6 peers found.
 
 The output shows that Calico is now peered with host1 (`10.0.1.10`), which is our bastion host. This means Calico can share routes to and learn routes from it.
 
-In a real-world on-prem deployment you would typically configure Calico nodes within a rack to peer with the ToRs (Top of Rack) routers, and the ToRs are then connected to the rest of the enterprise or data center network. In this way pods can be reached from anywhere in then network if desired. You could even go as far as giving some pods public IP address and have them addressable from the internet if you wanted to.
+In a real-world on-prem deployment you would typically configure Calico nodes within a rack to peer with the ToRs (Top of Rack) routers, and the ToRs are then connected to the rest of the enterprise or data center network. In this way pods can be reached from anywhere in the network if desired. You could even go as far as giving some pods public IP address and have them addressable from the internet if you wanted to.
 
 We're done with adding the peers, so exit from worker1 to return back to the bastion host:
 
