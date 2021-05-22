@@ -90,7 +90,12 @@ Switch to worker1:
 ```
 $ ssh worker1
 ```
-
+Make sure calicoctl binary installed on your worker1 node.
+```
+$ curl -o calicoctl -O -L  "https://github.com/projectcalico/calicoctl/releases/download/v3.19.0/calicoctl"
+$ chmod +x calicoctl
+$ sudo mv calicoctl /usr/local/bin
+```
 Check the status of Calico on the node:
 ```bash
 $ sudo calicoctl node status
