@@ -86,6 +86,6 @@ You should have the following behaviour:
 Let's cleanup the network policy for now.
 
 ```
-calicoctl delete -f 4.1-customer2summary.yaml 
+$ calicoctl delete -f 4.1-customer2summary.yaml 
 Successfully deleted 1 'NetworkPolicy' resource(s)
 ```
