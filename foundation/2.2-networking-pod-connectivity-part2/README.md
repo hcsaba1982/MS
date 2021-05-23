@@ -3,9 +3,9 @@
 This lab will explore k8s ip adress management via Calico IPAM.
 
 In this lab, you will: \
-2.3.1. Check existing IP Pools, and create new IP Pools. \
-2.3.2. Update the yaobank deployments with the new IP Pools. \
-2.3.3. Verify host routing.
+2.2.1. Check existing IP Pools, and create new IP Pools. \
+2.2.2. Update the yaobank deployments with the new IP Pools. \
+2.2.3. Verify host routing.
 
 ### 2.2.0. Before you begin
 
