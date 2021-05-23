@@ -17,7 +17,7 @@ In the K8s Network Policy deployed in the firts Network Polciy lab , the develop
 
 This lab guides you through the process of deploying a egress lockdown policy in our cluster.
 In Lab 4.2, we have applied a policy that allows all pod access. Here we will implement a more restrictive policy that allows minimal access and denies everything else.
-Let's first start with verifying connectivity with the configuration of Lab4.2 already applied.
+Let's first start with verifying connectivity with the configuration of Lab 4.2 already applied.
 
 #### 4.3.1.1. Confirm that pods are able to initiate connections to the Internet
 
