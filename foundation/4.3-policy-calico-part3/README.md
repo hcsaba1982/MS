@@ -82,7 +82,7 @@ $ ping -c 3 8.8.8.8
 $ curl -I www.google.com
 ```
 
-These commands should fail - pods are now restricted to only accessing other pods and nodes within the cluster. You may need to terminate the command with CTRL- and exit back to your node.
+These commands should fail - pods are now restricted to only accessing other pods and nodes within the cluster. You may need to terminate the command with CTRL+C and exit back to your node.
 
 ```
 $ exit
