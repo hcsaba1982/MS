@@ -232,7 +232,7 @@ spec:
 $ calicoctl apply -f 4.3-host-endpoint-master.yaml
 ```
 
-One thing important to note is we are defining enforcement in a specific interface. We should see now this node in our Host Endpoint list using the default profile as we have not defined any:
+One thing important to note is we are defining enforcement on a specific interface. We should see now this node in our Host Endpoint list using the default profile as we have not defined any:
 
 ```
 $ calicoctl get hep -o wide
