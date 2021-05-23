@@ -74,7 +74,7 @@ items:
     natOutgoing: true
     nodeSelector: all()
     vxlanMode: Never
- ```
+```
 
 Note the fields:
 
@@ -96,7 +96,7 @@ $ ip -c link
 ```
 
 Look at the `eth0` part of the output. The are a couple of things to note:
-* `eth0` is a link to the host network namespace (indicated by `link-netnsid 0` at the end of that line), and it is the fourth interface in our example above (the number in your lab will be different). That is one end of the virtual ethernet pair whcih calico will plumb to the host network namespace.
+* `eth0` is a link to the host network namespace (indicated by `link-netnsid 0` at the end of that line), and it is the fourth interface in our example above (the number in your lab will be different). That is one end of the virtual ethernet pair which calico will plumb to the host network namespace.
 * The `@if11` after the interface name is the interface number of the other end of the veth pair within the host network namespace. Remember the number you see for later, as we will take look at the other end of the veth pair shortly.
 
 Finally, let's look at the routes the pod sees.
