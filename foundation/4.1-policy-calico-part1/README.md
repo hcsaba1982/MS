@@ -9,7 +9,7 @@ In this lab we will: \
 
 Throughout this lab, we will be using the yaobank app we deployed in the previous lab.
 
-### 4.1.1. Verify connectivity from CentOS pod
+### 4.1.1. Verify connectivity from Customer pod
 
 Let's start getting the address of the summary service:
 
