@@ -161,7 +161,7 @@ This should succeed - i.e., the Kubernetes cluster's etcd store is left exposed 
 
 #### 4.3.3.2. Create Network Policy for Hosts
 
-Lets create a host endpoint policies for the kubernetes master node to provide an example on how calico can enforce the security on those. But first, we must know Calico implements a failsafe polciy to avoid locking down an environment by mistake, this is done through the Felix Configuration. As an example, we will remove the etcd, and ssh ports from the failsafe list, and then apply a polciy to allow only the SSH access, as we have a single master in our cluster, so no there is no need to expose etcd port 2379. Let's check our current felix configuration:
+Lets create a host endpoint policies for the kubernetes master node to provide an example on how calico can enforce the security on those. But first, we must know Calico implements a failsafe polciy to avoid locking down an environment by mistake, this is done through the Felix Configuration. As an example, we will remove the etcd, and ssh ports from the failsafe list, and then apply a polciy to allow only the SSH access, as we have a single master in our cluster, so there is no need to expose etcd port 2379. Let's check our current felix configuration:
 
 ```
 $ calicoctl get felixconfig default -o yaml --export 
