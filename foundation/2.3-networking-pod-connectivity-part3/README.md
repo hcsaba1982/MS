@@ -1,6 +1,6 @@
 ## 2.3. Networking:  Pod Connectivity - Part 2
 
-This is the 2nd lab in a series of labs exploring k8s networking. This lab focused on understanding relevant address ranges and BGP advertisement.
+This is the 3rd lab in a series of labs exploring k8s networking. This lab focused on understanding relevant address ranges and BGP advertisement.
 In this lab, you will: \
 2.3.1. Examine IP address ranges used by the cluster. \
 2.3.2. Create additional Calico IP Pools. \
@@ -170,7 +170,7 @@ $ exit
 
 ### 2.3.4. Configure a namespace to use externally routable IP addresses
 
-In the previous lab, we saw Calico supports annotations on both namespaces and pods that can be used to control which IP Pool (or even which IP address) a pod will receive when it is created.  Previously, we defined the annotations under the deplyments themselves, but in this this example we're going to create a namespace to host externally routable Pods.
+In the previous lab, we saw Calico supports annotations on both namespaces and pods that can be used to control which IP Pool (or even which IP address) a pod will receive when it is created.  Previously, we defined the annotations under the deployments themselves, but in this example we're going to create a namespace to host externally routable Pods.
 
 #### 2.3.4.1. Create the namespace
 
