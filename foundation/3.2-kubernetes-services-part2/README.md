@@ -47,17 +47,14 @@ $ calicoctl get bgpconfig default -o yaml
 ```
 ```
 apiVersion: projectcalico.org/v3
-kind: BGPConfigurationList
-items:
-- apiVersion: projectcalico.org/v3
-  kind: BGPConfiguration
-  metadata:
-    name: default
-    resourceVersion: "44447"
-    uid: 1df0e2fe-cded-42f6-a860-1e6c9e61644d
-  spec:
-    serviceClusterIPs:
-    - cidr: 10.49.0.0/16
+kind: BGPConfiguration
+metadata:
+  name: default
+  resourceVersion: "44447"
+  uid: 1df0e2fe-cded-42f6-a860-1e6c9e61644d
+spec:
+  serviceClusterIPs:
+  - cidr: 10.49.0.0/16
 ```
 
 #### 3.2.1.3. Examine routes
