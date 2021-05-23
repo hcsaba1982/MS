@@ -251,7 +251,7 @@ Try to access the Yaobank front end again with your browser as we tested in the 
 
 Let's examine and apply a policy for all the Yaobank services.
 ```
-more 4.2-more-yaobank-policy.yaml
+$ more 4.2-more-yaobank-policy.yaml
 
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
