@@ -21,7 +21,7 @@ namespace "yaobank" deleted
 
 ### 3.3.2. Deploy an ingress controller that listens to all namespaces
 
-Ingress is the built-in kubernetes framework for load-balancing http traffic. Cloud providers offer a similar functionality out of the box via cloud load-balancers. Ingress allows the manipulation of incoming http requests, natting/routing traffic to back-end services based on provided host/path or even passing-through traffic. It can effectively proved l7-based policies and typical load-balancing features such as stickiness, health probes or weight-based load-balancing.
+Ingress is the built-in kubernetes framework for load-balancing http traffic. Cloud providers offer a similar functionality out of the box via cloud load-balancers. Ingress allows the manipulation of incoming http requests, natting/routing traffic to back-end services based on provided host/path or even passing-through traffic. It can effectively provide L7-based policies and typical load-balancing features such as stickiness, health probes or weight-based load-balancing.
 
 Let's start with examining the already predeployed ingress controller:
 
