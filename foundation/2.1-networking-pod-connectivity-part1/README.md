@@ -148,7 +148,7 @@ $ ip -c link
     link/ether ee:ee:ee:ee:ee:ee brd ff:ff:ff:ff:ff:ff link-netnsid 2
 ```
 
-Looking at interface number 11 in this example, `cali12a8cc48008` links to `@if4` in network namespace ID 4 (the customer pod's network namespace).  You may recall that interface 4 in the pod's network namespace was `eth0`, so this looks exactly as expected for the veth pair that connects the customer pod to the host network namespace.  
+Looking at interface number 11 in this example, `cali12a8cc48008` links to `@if4` in network namespace ID 2 (the customer pod's network namespace).  You may recall that interface 4 in the pod's network namespace was `eth0`, so this looks exactly as expected for the veth pair that connects the customer pod to the host network namespace.  
 
 You can also see the host end of the veth pairs to other pods running on this node, all beginning with `cali`. This interfaces are unnumbered as we pointed before:
 
